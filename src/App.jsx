@@ -11,9 +11,9 @@ function App() {
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("darkMode");
       if (stored !== null) return stored === "true";
-      return true; // Default to dark mode
+      return false; // Default to light mode
     }
-    return true;
+    return false;
   });
 
   useEffect(() => {
