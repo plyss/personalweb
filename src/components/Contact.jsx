@@ -87,7 +87,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Let's Connect
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+          <p className="text-slate-600 max-w-xl mx-auto">
             Have a project that needs quality assurance or want to discuss
             testing strategies? I'd love to hear from you.
           </p>
@@ -108,7 +108,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+                      className="block text-sm font-medium mb-2 text-slate-700"
                     >
                       Name
                     </label>
@@ -126,7 +126,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+                      className="block text-sm font-medium mb-2 text-slate-700"
                     >
                       Email
                     </label>
@@ -146,7 +146,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+                    className="block text-sm font-medium mb-2 text-slate-700"
                   >
                     Subject
                   </label>
@@ -165,7 +165,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300"
+                    className="block text-sm font-medium mb-2 text-slate-700"
                   >
                     Message
                   </label>
@@ -222,12 +222,12 @@ export default function Contact() {
             {/* Location */}
             <div className="glass-card p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-xl bg-accent-50 dark:bg-accent-900/20">
-                  <MapPin className="w-5 h-5 text-accent-600 dark:text-accent-400" />
+                <div className="p-2 rounded-xl bg-accent-50">
+                  <MapPin className="w-5 h-5 text-accent-600" />
                 </div>
                 <h4 className="font-semibold">Location</h4>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 ml-12">
+              <p className="text-sm text-slate-600 ml-12">
                 Jakarta, Indonesia
               </p>
             </div>
@@ -235,14 +235,14 @@ export default function Contact() {
             {/* Email */}
             <div className="glass-card p-6">
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-xl bg-pass-50 dark:bg-pass-900/20">
-                  <Mail className="w-5 h-5 text-pass-600 dark:text-pass-400" />
+                <div className="p-2 rounded-xl bg-pass-50">
+                  <Mail className="w-5 h-5 text-pass-600" />
                 </div>
                 <h4 className="font-semibold">Email</h4>
               </div>
               <a
                 href="mailto:mfaisalalam13@gmail.com"
-                className="text-sm text-accent-600 dark:text-accent-400 hover:underline ml-12"
+                className="text-sm text-accent-600 hover:underline ml-12"
               >
                 mfaisalalam13@gmail.com
               </a>
@@ -256,10 +256,10 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/mochfaisalam/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors group"
+                  className="flex items-center gap-3 text-sm text-slate-600 hover:text-accent-600 transition-colors group"
                   id="social-linkedin"
                 >
-                  <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 group-hover:bg-accent-50 dark:group-hover:bg-accent-900/20 transition-colors">
+                  <div className="p-2 rounded-lg bg-slate-100 group-hover:bg-accent-50 transition-colors">
                     <LinkedinIcon className="w-4 h-4" />
                   </div>
                   LinkedIn
@@ -279,25 +279,25 @@ export default function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xl max-w-md w-full border border-slate-200 dark:border-slate-800 relative"
+              className="bg-white rounded-2xl p-6 shadow-xl max-w-md w-full border border-slate-200 relative"
             >
               <button
                 onClick={() => setShowConfirm(false)}
-                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
 
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-full bg-accent-50 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">
+                <div className="p-2.5 rounded-full bg-accent-50 text-accent-600">
                   <AlertCircle className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                <h3 className="text-lg font-bold text-slate-900">
                   Confirm Submission
                 </h3>
               </div>
 
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">
+              <p className="text-sm text-slate-600 mb-6">
                 Are you sure you want to send this message? Please double-check your details before submitting.
               </p>
 
@@ -305,7 +305,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={() => setShowConfirm(false)}
-                  className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>

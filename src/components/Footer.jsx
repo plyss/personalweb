@@ -1,4 +1,5 @@
 import { Shield, ArrowUp, Mail } from "lucide-react";
+import logo from "../assets/personallogo.png";
 
 // Brand icons (not available in lucide-react)
 const GithubIcon = ({ className }) => (
@@ -31,19 +32,19 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-900/30">
+    <footer className="border-t border-slate-200/50 bg-slate-50/50">
       <div className="section-container py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <img className="w-8 h-8 rounded-lg" src="/src/assets/personallogo.png" alt="Faisal" />
+              <img className="w-8 h-8 rounded-lg" src={logo} alt="Faisal" />
             </div>
             <div>
               <p className="font-semibold text-sm">
                 Faisal<span className="text-accent-500">.</span>
               </p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
+              <p className="text-xs text-slate-500">
                 SQA Engineer
               </p>
             </div>
@@ -55,7 +56,7 @@ export default function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                className="text-sm text-slate-500 hover:text-slate-900 transition-colors"
               >
                 {link.label}
               </a>
@@ -70,7 +71,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
+                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all duration-200"
                 aria-label={social.label}
               >
                 <social.icon className="w-4 h-4" />
@@ -78,7 +79,7 @@ export default function Footer() {
             ))}
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 ml-2"
+              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all duration-200 ml-2"
               aria-label="Scroll to top"
               id="scroll-to-top"
             >
@@ -88,9 +89,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800/50 text-center">
-          <p className="text-xs text-slate-400 dark:text-slate-500">
-            © {new Date().getFullYear()} Faisal. Built with React & Tailwind CSS.
+        <div className="mt-8 pt-6 border-t border-slate-200/50 text-center">
+          <p className="text-xs text-slate-400">
+            © 2026 Faisal. Built with React & Tailwind CSS.
           </p>
         </div>
       </div>

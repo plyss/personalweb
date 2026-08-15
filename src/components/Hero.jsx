@@ -41,11 +41,11 @@ export default function Hero() {
     >
       {/* Subtle background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent-500/5 dark:bg-accent-500/10 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-pass-500/5 dark:bg-pass-500/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-pass-500/5 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
         {/* Grid pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
               "radial-gradient(circle, currentColor 1px, transparent 1px)",
@@ -84,7 +84,7 @@ export default function Hero() {
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl lg:max-w-none"
+              className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl lg:max-w-none"
             >
               Focused on functional reliability, API validation, and test
               automation. Experienced across the full testing lifecycle — from
@@ -141,7 +141,7 @@ export default function Hero() {
               <img
                 src="/avatar.jpg"
                 alt="Faisal — SQA Engineer"
-                className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl ring-1 ring-slate-200 dark:ring-slate-700 shadow-xl"
+                className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl ring-1 ring-slate-200 shadow-xl"
               />
               {/* Floating badge */}
               <motion.div
@@ -152,7 +152,7 @@ export default function Hero() {
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-pass-500 animate-pulse" />
-                  <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-medium text-slate-700">
                     QA Engineer
                   </span>
                 </div>

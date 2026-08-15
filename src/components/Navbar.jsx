@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar({ darkMode, toggleDarkMode }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -57,7 +57,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-slate-200/50 dark:shadow-slate-800/50"
+          ? "bg-white/80 backdrop-blur-xl shadow-sm shadow-slate-200/50"
           : "bg-transparent"
       }`}
     >
@@ -81,15 +81,15 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                   activeSection === link.href.slice(1)
-                    ? "text-accent-600 dark:text-accent-400"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
+                    ? "text-accent-600"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 {link.label}
                 {activeSection === link.href.slice(1) && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute inset-0 bg-accent-50 dark:bg-accent-900/20 rounded-lg -z-10"
+                    className="absolute inset-0 bg-accent-50 rounded-lg -z-10"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -102,7 +102,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200"
+              className="md:hidden p-2.5 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-all duration-200"
               aria-label="Toggle mobile menu"
               id="mobile-menu-toggle"
             >
@@ -124,7 +124,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200/50 dark:border-slate-800/50"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/50"
           >
             <div className="section-container py-4 space-y-1">
               {navLinks.map((link, i) => (
@@ -137,8 +137,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                   transition={{ delay: i * 0.05 }}
                   className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                     activeSection === link.href.slice(1)
-                      ? "text-accent-600 dark:text-accent-400 bg-accent-50 dark:bg-accent-900/20"
-                      : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      ? "text-accent-600 bg-accent-50"
+                      : "text-slate-600 hover:bg-slate-100"
                   }`}
                 >
                   {link.label}

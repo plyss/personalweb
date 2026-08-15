@@ -23,7 +23,7 @@ const skillCategoryColors = {
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-slate-50/50 dark:bg-slate-900/30">
+    <section id="about" className="section-padding bg-slate-50/50">
       <div className="section-container">
         {/* Section header */}
         <motion.div
@@ -51,7 +51,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <div className="glass-card p-8">
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base sm:text-lg">
+            <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
               I'm a QA Engineer with experience in both manual testing and test
               automation, with a strong focus on ensuring software quality,
               reliability, and a smooth user experience. I take a detail-oriented
@@ -84,7 +84,7 @@ export default function About() {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card p-5"
               >
-                <h4 className="text-sm font-semibold text-accent-600 dark:text-accent-400 mb-3 uppercase tracking-wider">
+                <h4 className="text-sm font-semibold text-accent-600 mb-3 uppercase tracking-wider">
                   {category}
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
@@ -107,8 +107,8 @@ export default function About() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className="p-2 rounded-xl bg-accent-50 dark:bg-accent-900/20">
-              <Briefcase className="w-5 h-5 text-accent-600 dark:text-accent-400" />
+            <div className="p-2 rounded-xl bg-accent-50">
+              <Briefcase className="w-5 h-5 text-accent-600" />
             </div>
             <h3 className="text-xl font-semibold">Work Experience</h3>
           </motion.div>
@@ -129,10 +129,10 @@ export default function About() {
                   {/* Header */}
                   <div className="mb-4">
                     <h4 className="text-lg font-semibold mb-1">{job.role}</h4>
-                    <p className="text-accent-600 dark:text-accent-400 font-medium text-sm">
+                    <p className="text-accent-600 font-medium text-sm">
                       {job.company}
                     </p>
-                    <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-slate-500 dark:text-slate-400">
+                    <div className="flex flex-wrap items-center gap-3 mt-2 text-xs text-slate-500">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         {job.period}
@@ -145,7 +145,7 @@ export default function About() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                     {job.description}
                   </p>
 
@@ -154,7 +154,7 @@ export default function About() {
                     {job.highlights.map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400"
+                        className="flex items-start gap-2 text-sm text-slate-600"
                       >
                         <ChevronRight className="w-3.5 h-3.5 text-accent-500 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
@@ -184,8 +184,8 @@ export default function About() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className="p-2 rounded-xl bg-pass-50 dark:bg-pass-900/20">
-              <GraduationCap className="w-5 h-5 text-pass-600 dark:text-pass-400" />
+            <div className="p-2 rounded-xl bg-pass-50">
+              <GraduationCap className="w-5 h-5 text-pass-600" />
             </div>
             <h3 className="text-xl font-semibold">Education & Certifications</h3>
           </motion.div>
@@ -199,15 +199,15 @@ export default function About() {
             transition={{ duration: 0.5 }}
           >
             <div className="glass-card p-6 flex items-center gap-4">
-              <div className="p-3 rounded-xl bg-accent-50 dark:bg-accent-900/20 flex-shrink-0">
-                <GraduationCap className="w-6 h-6 text-accent-600 dark:text-accent-400" />
+              <div className="p-3 rounded-xl bg-accent-50 flex-shrink-0">
+                <GraduationCap className="w-6 h-6 text-accent-600" />
               </div>
               <div>
                 <h4 className="font-semibold">{education.degree}</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-sm text-slate-600">
                   {education.institution}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">
+                <p className="text-xs text-slate-500 mt-1">
                   {education.period}
                 </p>
               </div>
@@ -225,12 +225,12 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="glass-card p-6 flex flex-col sm:flex-row sm:items-center gap-4">
-                <div className="p-3 rounded-xl bg-accent-50 dark:bg-accent-900/20 flex-shrink-0 self-start sm:self-center">
-                  <BookOpen className="w-6 h-6 text-accent-600 dark:text-accent-400" />
+                <div className="p-3 rounded-xl bg-accent-50 flex-shrink-0 self-start sm:self-center">
+                  <BookOpen className="w-6 h-6 text-accent-600" />
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-sm leading-snug mb-1">{pub.title}</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <p className="text-xs text-slate-600">
                     {pub.publisher} &middot; {pub.date}
                   </p>
                 </div>
@@ -239,7 +239,7 @@ export default function About() {
                     href={pub.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-accent-50 text-accent-700 dark:bg-accent-900/30 dark:text-accent-300 hover:bg-accent-100 dark:hover:bg-accent-900/50 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-accent-50 text-accent-700 hover:bg-accent-100 transition-colors"
                   >
                     View Publication
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -265,15 +265,15 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="block h-full"
                 >
-                  <div className="glass-card p-4 flex items-start gap-3 h-full hover:shadow-md hover:border-accent-200 dark:hover:border-accent-700/50 transition-all duration-200 group">
-                    <div className="p-1.5 rounded-lg bg-pass-50 dark:bg-pass-900/20 flex-shrink-0 mt-0.5 group-hover:bg-accent-50 dark:group-hover:bg-accent-900/20 transition-colors">
-                      <Award className="w-4 h-4 text-pass-600 dark:text-pass-400 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors" />
+                  <div className="glass-card p-4 flex items-start gap-3 h-full hover:shadow-md hover:border-accent-200 transition-all duration-200 group">
+                    <div className="p-1.5 rounded-lg bg-pass-50 flex-shrink-0 mt-0.5 group-hover:bg-accent-50 transition-colors">
+                      <Award className="w-4 h-4 text-pass-600 group-hover:text-accent-600 transition-colors" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium leading-snug group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+                      <p className="text-sm font-medium leading-snug group-hover:text-accent-600 transition-colors">
                         {cert.name}
                       </p>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                      <p className="text-xs text-slate-500 mt-1">
                         {cert.issuer}
                       </p>
                     </div>
